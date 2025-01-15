@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-tac-toe com IA</title>
+    <title>Tic-tac-toe with AI</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Tic-tac-toe</h1>
         
-        <!-- Seletor de modo -->
+        <!-- MODE SELECTOR -->
         <div class="mode-selector">
-            <button id="toggleMode" class="mode-button">Modo: 2 Jogadores</button>
+            <button id="toggleMode" class="mode-button">Gamemode: 2 PLAYERS</button>
         </div>
 
         <div class="scoreboard">
             <div class="score-card">
-                <div class="player">Jogador X</div>
+                <div class="player">Player X</div>
                 <div class="points" id="scoreX">0</div>
             </div>
             <div class="score-card">
-                <div class="player">Empates</div>
+                <div class="player">Draws</div>
                 <div class="points" id="scoreDraw">0</div>
             </div>
             <div class="score-card">
-                <div class="player" id="playerOLabel">Jogador O</div>
+                <div class="player" id="playerOLabel">Player O</div>
                 <div class="points" id="scoreO">0</div>
             </div>
         </div>
 
-        <div id="status">Vez do jogador: X</div>
+        <div id="status">Player Turn: X</div>
         <div class="board" id="board">
             <button class="cell" data-index="0"></button>
             <button class="cell" data-index="1"></button>
@@ -43,8 +43,8 @@
             <button class="cell" data-index="8"></button>
         </div>
         <div class="buttons">
-            <button id="restart">Recomeçar Jogo</button>
-            <button id="resetScore">Zerar Placar</button>
+            <button id="restart">Restart</button>
+            <button id="resetScore">Reset scoreboard</button>
         </div>
     </div>
     <script src="script.js"></script>

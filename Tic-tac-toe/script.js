@@ -35,8 +35,8 @@ class TicTacToe {
 
     toggleGameMode() {
         this.isAIMode = !this.isAIMode;
-        this.toggleModeButton.textContent = `Modo: ${this.isAIMode ? 'vs IA' : '2 Jogadores'}`;
-        this.playerOLabel.textContent = this.isAIMode ? 'Computador (O)' : 'Jogador O';
+        this.toggleModeButton.textContent = `Gamemode: ${this.isAIMode ? 'vs IA' : '2 Players'}`;
+        this.playerOLabel.textContent = this.isAIMode ? 'Computer (O)' : 'Player O';
         this.restartGame();
     }
 
@@ -69,19 +69,19 @@ class TicTacToe {
         this.cells[index].style.color = this.currentPlayer === 'X' ? '#e74c3c' : '#3498db';
         
         if (this.checkWin()) {
-            this.statusElement.textContent = `${this.isAIMode && this.currentPlayer === 'O' ? 'Computador' : 'Jogador ' + this.currentPlayer} venceu!`;
+            this.statusElement.textContent = `${this.isAIMode && this.currentPlayer === 'O' ? 'Computer' : 'Player ' + this.currentPlayer} wins!`;
             this.gameActive = false;
             this.updateScore(this.currentPlayer);
         } else if (this.checkDraw()) {
-            this.statusElement.textContent = 'Empate!';
+            this.statusElement.textContent = 'Draw!';
             this.gameActive = false;
             this.updateScore('draw');
         } else {
             this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
             if (!this.isAIMode || this.currentPlayer === 'X') {
-                this.statusElement.textContent = `Vez do jogador: ${this.currentPlayer}`;
+                this.statusElement.textContent = `Players turn: ${this.currentPlayer}`;
             } else {
-                this.statusElement.textContent = 'Vez do computador...';
+                this.statusElement.textContent = ' turn...';
             }
         }
     }
@@ -168,7 +168,7 @@ class TicTacToe {
         this.board = Array(9).fill('');
         this.currentPlayer = 'X';
         this.gameActive = true;
-        this.statusElement.textContent = `Vez do jogador: ${this.currentPlayer}`;
+        this.statusElement.textContent = `Players turn: ${this.currentPlayer}`;
         this.cells.forEach(cell => {
             cell.textContent = '';
             cell.classList.remove('ai-move');
