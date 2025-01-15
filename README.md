@@ -11,10 +11,10 @@ This repository serves as a central hub for my portfolio projects, providing eas
 
 *[Note: Replace these examples with your actual projects]*
 
-### Project 1: [Project Name]
-- Brief description of the project
-- Technologies used
-- Link to live demo (if available)
+### Project 1: [TIC-TAC-TOE]
+- An interactive Tic-tac-toe game built with HTML, CSS, and JavaScript.
+- The game features both a two-player mode and an AI opponent mode, along with a scoring system to track wins and draws.
+
 
 ### Project 2: [Project Name]
 - Brief description of the project
@@ -23,8 +23,7 @@ This repository serves as a central hub for my portfolio projects, providing eas
 
 ## 🛠️ Technologies
 
-*[Customize this section based on your tech stack]*
-- Programming Languages: 
+- Programming Languages: C,C++,JS
 - Frameworks: 
 - Tools: 
 
