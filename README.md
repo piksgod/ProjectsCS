@@ -11,7 +11,7 @@ This repository serves as a central hub for my portfolio projects, providing eas
 
 *[Note: Replace these examples with your actual projects]*
 
-### Project 1: [Project Name]
+### Project 1: [TIC-TAC-TOE]
 - Brief description of the project
 - Technologies used
 - Link to live demo (if available)
@@ -23,8 +23,7 @@ This repository serves as a central hub for my portfolio projects, providing eas
 
 ## 🛠️ Technologies
 
-*[Customize this section based on your tech stack]*
-- Programming Languages: 
+- Programming Languages: C,C++,JS
 - Frameworks: 
 - Tools: 
 
