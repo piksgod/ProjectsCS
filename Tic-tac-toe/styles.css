@@ -12,6 +12,36 @@ body {
     text-align: center;
 }
 
+/* Estilo do Placar */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.score-card {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.player {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.points {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -30,7 +60,9 @@ body {
     border-radius: 5px;
     font-size: 40px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    color: #333;  /* Cor padrão escura para os símbolos */
+    font-weight: bold;
 }
 
 .cell:hover {
@@ -40,9 +72,17 @@ body {
 #status {
     margin: 20px 0;
     font-size: 24px;
+    color: #333;
 }
 
-#restart {
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
     padding: 10px 20px;
     font-size: 18px;
     background-color: #4CAF50;
@@ -53,6 +93,14 @@ body {
     transition: background-color 0.3s;
 }
 
-#restart:hover {
+button:hover {
     background-color: #45a049;
+}
+
+#resetScore {
+    background-color: #f44336;
+}
+
+#resetScore:hover {
+    background-color: #da190b;
 }

@@ -3,11 +3,22 @@ class TicTacToe {
         this.board = Array(9).fill('');
         this.currentPlayer = 'X';
         this.gameActive = true;
+        
+        // Elementos do DOM
         this.cells = document.querySelectorAll('.cell');
         this.statusElement = document.getElementById('status');
         this.restartButton = document.getElementById('restart');
+        this.resetScoreButton = document.getElementById('resetScore');
+        
+        // Placar
+        this.scores = {
+            X: 0,
+            O: 0,
+            draw: 0
+        };
         
         this.initializeGame();
+        this.updateScoreDisplay();
     }
 
     initializeGame() {
@@ -15,6 +26,7 @@ class TicTacToe {
             cell.addEventListener('click', () => this.handleCellClick(cell));
         });
         this.restartButton.addEventListener('click', () => this.restartGame());
+        this.resetScoreButton.addEventListener('click', () => this.resetScore());
     }
 
     handleCellClick(cell) {
@@ -23,13 +35,16 @@ class TicTacToe {
         if (this.board[index] === '' && this.gameActive) {
             this.board[index] = this.currentPlayer;
             cell.textContent = this.currentPlayer;
+            cell.style.color = this.currentPlayer === 'X' ? '#e74c3c' : '#3498db';  // Adiciona o atributo para estilização
             
             if (this.checkWin()) {
                 this.statusElement.textContent = `Jogador ${this.currentPlayer} venceu!`;
                 this.gameActive = false;
+                this.updateScore(this.currentPlayer);
             } else if (this.checkDraw()) {
                 this.statusElement.textContent = 'Empate!';
                 this.gameActive = false;
+                this.updateScore('draw');
             } else {
                 this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
                 this.statusElement.textContent = `Vez do jogador: ${this.currentPlayer}`;
@@ -55,12 +70,37 @@ class TicTacToe {
         return this.board.every(cell => cell !== '');
     }
 
+    updateScore(winner) {
+        if (winner === 'draw') {
+            this.scores.draw++;
+        } else {
+            this.scores[winner]++;
+        }
+        this.updateScoreDisplay();
+    }
+
+    updateScoreDisplay() {
+        document.getElementById('scoreX').textContent = this.scores.X;
+        document.getElementById('scoreO').textContent = this.scores.O;
+        document.getElementById('scoreDraw').textContent = this.scores.draw;
+    }
+
     restartGame() {
         this.board = Array(9).fill('');
         this.currentPlayer = 'X';
         this.gameActive = true;
         this.statusElement.textContent = `Vez do jogador: ${this.currentPlayer}`;
         this.cells.forEach(cell => cell.textContent = '');
+    }
+
+    resetScore() {
+        this.scores = {
+            X: 0,
+            O: 0,
+            draw: 0
+        };
+        this.updateScoreDisplay();
+        this.restartGame();
     }
 }
 
