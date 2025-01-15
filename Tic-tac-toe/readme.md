@@ -2,7 +2,8 @@
 
 ## Overview
 An interactive Tic-tac-toe game built with HTML, CSS, and JavaScript. The game features both a two-player mode and an AI opponent mode, along with a scoring system to track wins and draws.
-
+LIVE-PREVIEW
+https://piksgod.github.io/ProjectsCS/Tic-tac-toe/
 ## Key Features
 
 ### Game Modes
