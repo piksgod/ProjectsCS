@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-tac-toe</title>
+    <title>Tic-tac-toe com IA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Tic-tac-toe</h1>
         
-        <!-- Novo elemento para o placar -->
+        <!-- Seletor de modo -->
+        <div class="mode-selector">
+            <button id="toggleMode" class="mode-button">Modo: 2 Jogadores</button>
+        </div>
+
         <div class="scoreboard">
             <div class="score-card">
                 <div class="player">Jogador X</div>
@@ -21,7 +25,7 @@
                 <div class="points" id="scoreDraw">0</div>
             </div>
             <div class="score-card">
-                <div class="player">Jogador O</div>
+                <div class="player" id="playerOLabel">Jogador O</div>
                 <div class="points" id="scoreO">0</div>
             </div>
         </div>

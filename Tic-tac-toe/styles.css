@@ -12,7 +12,25 @@ body {
     text-align: center;
 }
 
-/* Estilo do Placar */
+.mode-selector {
+    margin: 20px 0;
+}
+
+.mode-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mode-button:hover {
+    background-color: #8e44ad;
+}
+
 .scoreboard {
     display: flex;
     justify-content: center;
@@ -61,12 +79,16 @@ body {
     font-size: 40px;
     cursor: pointer;
     transition: all 0.3s;
-    color: #333;  /* Cor padrão escura para os símbolos */
+    color: #333;
     font-weight: bold;
 }
 
 .cell:hover {
     background-color: #eee;
+}
+
+.cell.ai-move {
+    background-color: #e8f5e9;
 }
 
 #status {
